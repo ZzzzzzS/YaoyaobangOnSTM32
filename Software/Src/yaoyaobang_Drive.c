@@ -151,6 +151,56 @@ void ShowImage(const char *this)
 
 void PowerManagement()
 {
+  
+  __HAL_RCC_LEDGPIO_CLK_ENABLE();
+  
+  GPIO_InitTypeDef LEDInit;
+  LEDInit.Mode=GPIO_MODE_ANALOG;
+  LEDInit.Pull=GPIO_NOPULL;
+  LEDInit.Speed=GPIO_SPEED_FREQ_LOW;
+  
+  LEDInit.Pin=LED0;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED1;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED2;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED3;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED4;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED5;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED6;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED7;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED8;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED9;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED10;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED11;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED12;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED13;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED14;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  LEDInit.Pin=LED15;
+  HAL_GPIO_Init(GPIOB,&LEDInit);
+  
+  
+  GPIO_InitTypeDef VibrateInit;
+  VibrateInit.Mode=GPIO_MODE_ANALOG;
+  VibrateInit.Pull=GPIO_NOPULL;
+  VibrateInit.Speed=GPIO_SPEED_FREQ_LOW;
+  VibrateInit.Pin=Vibrate;
+  
+  HAL_GPIO_Init(VibrateGPIO,&VibrateInit);
+  
   HAL_PWR_EnterSTANDBYMode();
 }
 

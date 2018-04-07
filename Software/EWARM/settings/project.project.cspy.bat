@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "D:\m1899\桌面\project\EWARM\settings\project.project.general.xcl" --backend -f "D:\m1899\桌面\project\EWARM\settings\project.project.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM\settings\project.project.general.xcl" --backend -f "D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM\settings\project.project.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "D:\m1899\桌面\project\EWARM\settings\project.project.general.xcl" "--debug_file=%~1" --backend -f "D:\m1899\桌面\project\EWARM\settings\project.project.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM\settings\project.project.general.xcl" "--debug_file=%~1" --backend -f "D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM\settings\project.project.driver.xcl" 
 
 @echo off 
 :end

@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+---
+title: 自制摇摇棒
+date: 2018-04-08 00:11:34
+tags: [STM32,作品]
+author: 
+ nick: ZZS
+ link: http://zzzzzzs.github.io/
+cover: http://zzshubimage-1253829354.file.myqcloud.com/yaoyaobang/%E8%8D%89%E5%9B%BE.png
+---
 
-You can use the [editor on GitHub](https://github.com/ZzzzzzS/YaoyaobangOnSTM32/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# 自制摇摇棒开发总结
+> 最近做了一个摇摇棒,也算是一个小制作吧,原理很简单,制作过程也不是很复杂,不过一路上遇到了好多的坑,总结记录一下,希望以后能不再犯.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+>YaoyaobangOnSTM32硬件及软件[资料下载](https://github.com/ZzzzzzS/YaoyaobangOnSTM32)
 
-### Markdown
+***
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# 摇摇棒简介
 
-```markdown
-Syntax highlighted code block
+![](https://zzshubimage-1253829354.file.myqcloud.com/yaoyaobang/%E8%8D%89%E5%9B%BE2.png)
 
-# Header 1
-## Header 2
-### Header 3
+摇摇棒就是一个可以摇动然后显示图案的小制作.我制作的摇摇棒使用**STM32C8T6**微控制器作为主控,采用16个LED灯作为显示部分,采用ams1117作为电源稳压芯片,也可直接不经过稳压芯片直接驱动.软件方面设计为摇动的频率可变,以任意较快频率(可产生视觉暂留现象的频率)晃动都可以产生图像.采用低功耗设计,自动进入待机模式节省电量.待机时功耗低至60μw.
 
-- Bulleted
-- List
+### 细节
 
-1. Numbered
-2. List
+![](https://zzshubimage-1253829354.file.myqcloud.com/yaoyaobang/%E8%8D%89%E5%9B%BE3.png)
 
-**Bold** and _Italic_ and `Code` text
+# 填坑总结
+## 坑1:JTAG管脚复用问题
+焊接完成芯片以后测试时发现有几个脚连在了一起,挑开后发现始终**GPIOB3**和**GPIOB4**脚不受控制.开始以为是脚还连在一起,换芯片后问题依旧.**最后发现是JTAG管脚复用问题,这两个脚上电默认功能是JTAG,需要先复用成GPIO,之后操作GPIO才有效**,在STM32的HAL库中系统初始化时本来关闭了JTAG的,但是STlink就没法工作,于是我将那一行注释了就造成这样的错误.
 
-[Link](url) and ![Image](src)
-```
+## 坑2:flash容量选错
+开始建立工程时芯片型号选择错误,导致flash容量时错误的,虽然烧录进去了,但是执行的时候程序跑飞,差点锁死.**CMSIS-DAP使用没有STlink和J-link那么稳定,尤其是解锁或者擦flash的时候**.另外建立工程时一定要**选择正确型号**
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## 坑3:编译优化等级
+采用CubeMX建立出来的工程貌似默认的编译优化等级就是最高级,导致最开始的调试结果始终有问题,单步调试时总感觉很奇怪.**在开发调试阶段一定要注意编译优化等级,不要开优化,到后期优化时在开高**,太高等级有可能无法正常运行的.
 
-### Jekyll Themes
+## 坑4:AMS1117功耗问题
+AMS1117作为线性稳压电源静态功耗其实不低的,根据我的测算,输入电压6v时静态电流5mA.其实也不是很大,不过需要低功耗场景时这个5mA却十分致命,严重影响续航时间(5mA那么1000mAh的电池只能待机8天).为保证待机时间,我在最后阶段去掉了这个芯片,待机电流迅速降低到19μA,理论上1000mAh的电池应该可以续航7年了.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ZzzzzzS/YaoyaobangOnSTM32/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# 结束
+遇到了坑,填吧,只能记录下来尽量让下次注意.通过这个小制作也更加了解STM32系列了,尤其是HAL库和低功耗设计.不得不说ST的HAL库确实良心,非常好用,层次清晰,抽象程度恰到好处,没有炫技式写法,帮助文档做得也十分贴心,看得出来ST确实用心做了这个库,不像NXP的MCUXpresso,简直难用到爆炸,为炫技而存在,故意复杂化问题.另外配套的CubeMX工具也很好用,帮助建立工程以及初始化等,的确能让开发者直面问题本身而不是花大量时间建立工程,配置各种初始化等.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+***
+EOF
