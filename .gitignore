@@ -54,3 +54,4 @@ dkms.conf
 Software/EWARM/project/
 Software/EWARM/project/Exe/
 *.sim
+Hardware/__Previews/
