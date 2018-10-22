@@ -1,16 +1,16 @@
-"D:\m1899\桌面\project\Src\main.c"
+"D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\Src\main.c"
 -std=c99
 -ferror-limit=100
 -I
-D:\m1899\桌面\project\EWARM/../Inc
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM/../Inc
 -I
-D:\m1899\桌面\project\EWARM/../Drivers/STM32F1xx_HAL_Driver/Inc
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM/../Drivers/STM32F1xx_HAL_Driver/Inc
 -I
-D:\m1899\桌面\project\EWARM/../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM/../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
 -I
-D:\m1899\桌面\project\EWARM/../Drivers/CMSIS/Device/ST/STM32F1xx/Include
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM/../Drivers/CMSIS/Device/ST/STM32F1xx/Include
 -I
-D:\m1899\桌面\project\EWARM/../Drivers/CMSIS/Include
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\EWARM/../Drivers/CMSIS/Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include
 -I
@@ -18,15 +18,15 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc\c
 -I
-D:\m1899\桌面\project\Inc
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\Inc
 -I
-D:\m1899\桌面\project\Drivers\STM32F1xx_HAL_Driver\Inc
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\Drivers\STM32F1xx_HAL_Driver\Inc
 -I
-D:\m1899\桌面\project\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy
 -I
-D:\m1899\桌面\project\Drivers\CMSIS\Device\ST\STM32F1xx\Include
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\Drivers\CMSIS\Device\ST\STM32F1xx\Include
 -I
-D:\m1899\桌面\project\Drivers\CMSIS\Include
+D:\m1899\Documents\嵌入式学习\Powered by ZZS\YaoyaobangOnSTM32\Software\Drivers\CMSIS\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include
 -DUSE_HAL_DRIVER=1

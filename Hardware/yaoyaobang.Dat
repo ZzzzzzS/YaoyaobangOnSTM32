@@ -1,0 +1,15 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~yaoyaobang.PrjPcb|ReportField=ProjectFullPath~C:\Users\m1899\OneDrive - stu.hit.edu.cn\文档\科创\Powered_by_ZZS\Embedded\YaoyaobangOnSTM32\Hardware\yaoyaobang.PrjPcb|ReportField=Title~Bill of Materials For Project [yaoyaobang.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~37|ReportField=ReportTime~18:39:49|ReportField=ReportDate~2018/10/22|ReportField=ReportDateTime~2018/10/22 18:39:49|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2018/10/22|ReportField=CurrentTime~18:38:17|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\m1899\OneDrive - stu.hit.edu.cn\文档\科创\Powered_by_ZZS\Embedded\YaoyaobangOnSTM32\Hardware\Sheet2.SchDoc|ReportField=DocumentName~Sheet2.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2018/3/19|ReportField=Organization~|ReportField=ProjectName~yaoyaobang.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~yaoyaobang.PrjPcb|ReportField=DataSourceFullPath~C:\Users\m1899\OneDrive - stu.hit.edu.cn\文档\科创\Powered_by_ZZS\Embedded\YaoyaobangOnSTM32\Hardware\yaoyaobang.PrjPcb
+20pF|贴片电容|C1, C2|0805_C|0805 20pF (200) 5% 50V|2
+100nF(104) 10% 50V|贴片电容|C3|0805_C|0805 100nF(104) 10% 50V|1
+104|贴片电容|C4, C5, C6, C20, C?|0805_C|0805 100nF(104) 10% 50V|5
+100nF|贴片电容|C7, C8|0805_C|0805 100nF(104) 10% 50V|2
+10uF|Capacitor|C9, C10|0805_C|电解电容|2
+LED||D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15|PCBComponent_1|LED|16
+Header 3|Header, 3-Pin|DOWNLOAD, POWER1|HDR1X3|Header 3|2
+10KΩ (1002) ±1%|贴片电阻|R1|0805_R|0805 10KΩ (1002) 1%|1
+100R|贴片电阻|R2|0805_R|0805 10KΩ (1002) 1%|1
+SW-PB|Switch|S1|KEY_3*6|SW-PB|1
+SW||sw1|PCBComponent_1 - duplicate|SW|1
+STM32F103C8T6|ARM|U1|LQFP-48_7x7x05P|STM32F103C8T6|1
+AMS1117-3.3|低压差线性稳压(LDO)|VR1|SOT-223|SOT-223 AMS1117-3.3|1
+XTAL|Crystal Oscillator|Y1|BCY-W2/D3.1|XTAL|1
